@@ -242,7 +242,8 @@
         
         /* 头部样式 */
         header {
-            padding-top: calc(60px + 8vh);
+            --nav-height: 80px;
+            padding-top: calc(var(--nav-height) + 6vh);
             padding-bottom: calc(50px + 5vh);
             text-align: center;
             position: relative;
@@ -941,8 +942,8 @@
             }
             
             header {
-                padding-top: calc(50px + 6vh);
-                padding-bottom: calc(40px + 4vh);
+                padding-top: calc(var(--nav-height, 60px) + 4vh);
+                padding-bottom: calc(40px + 3vh);
             }
             
             header h1 {
@@ -1029,8 +1030,8 @@
             }
             
             header {
-                padding-top: calc(40px + 5vh);
-                padding-bottom: calc(30px + 3vh);
+                padding-top: calc(var(--nav-height, 50px) + 3vh);
+                padding-bottom: calc(30px + 2vh);
             }
             
             header h1 {
@@ -1344,6 +1345,16 @@
             });
         }
         
+        // 动态调整首页顶部间距（基于导航栏高度）
+        function adjustHeaderSpacing() {
+            const nav = document.querySelector('nav');
+            const header = document.querySelector('header');
+            if (nav && header) {
+                const navHeight = nav.offsetHeight;
+                header.style.setProperty('--nav-height', navHeight + 'px');
+            }
+        }
+        
         // 页面加载完成后初始化
         window.addEventListener('DOMContentLoaded', () => {
             handleScrollAnimation();
@@ -1351,7 +1362,11 @@
             initBgInteractive();
             initGeoDecorations();
             randomizeFixedGeos();
+            adjustHeaderSpacing();
         });
+        
+        // 窗口大小改变时重新计算
+        window.addEventListener('resize', adjustHeaderSpacing);
         
         // 处理锚点跳转，确保内容居中显示
         function handleAnchorLinks() {
