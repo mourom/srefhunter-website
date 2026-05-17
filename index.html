@@ -243,11 +243,10 @@
         /* 头部样式 */
         header {
             --nav-height: 80px;
-            padding-top: calc(var(--nav-height) + 6vh);
-            padding-bottom: calc(50px + 5vh);
+            padding-top: calc(var(--nav-height) + 8vh);
+            padding-bottom: calc(60px + 6vh);
             text-align: center;
             position: relative;
-            overflow: hidden;
         }
         
         header .container {
@@ -259,10 +258,10 @@
         /* 层级规范：header-bg=0, header-circle=1, header-text=2, geo-deco/geo-dyn=3, container(文字内容)=10 */
         .header-bg {
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: calc(-1 * var(--nav-height, 80px));
+            left: 0; right: 0; bottom: 0;
             background: linear-gradient(160deg, #f8f9fa 0%, #e9ecef 40%, #f8f9fa 100%);
             z-index: 0;
-            overflow: hidden;
         }
         
         /* 同心圆环 */
@@ -941,11 +940,6 @@
                 font-size: 0.9rem;
             }
             
-            header {
-                padding-top: calc(var(--nav-height, 60px) + 4vh);
-                padding-bottom: calc(40px + 3vh);
-            }
-            
             header h1 {
                 font-size: 2.8rem;
             }
@@ -1027,11 +1021,6 @@
             .nav-links a {
                 font-size: 0.8rem;
                 white-space: nowrap;
-            }
-            
-            header {
-                padding-top: calc(var(--nav-height, 50px) + 3vh);
-                padding-bottom: calc(30px + 2vh);
             }
             
             header h1 {
