@@ -249,7 +249,7 @@
             --circle-size: min(620px, 62vw);
             
             /* 顶部间距 = 导航栏高度 + 视口高度的8%（避免被固定导航遮挡） */
-            padding-top: calc(var(--nav-height) + 16vh);
+            padding-top: calc(var(--nav-height) + 8vh);
             
             /* 底部间距 = 圆环尺寸×0.3 + 视口高度5%（控制文字到背景底部的距离） */
             padding-bottom: calc(var(--circle-size) * 0.3 + 5vh);
@@ -259,6 +259,9 @@
             
             text-align: center;
             position: relative;
+            
+            /* 裁切超出方框的背景效果（圆环、几何装饰等） */
+            overflow: hidden;
         }
         
         header .container {
@@ -270,8 +273,7 @@
         /* 层级规范：header-bg=0, header-circle=1, header-text=2, geo-deco/geo-dyn=3, container(文字内容)=10 */
         .header-bg {
             position: absolute;
-            top: calc(-1 * var(--nav-height, 80px));
-            left: 0; right: 0; bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background: linear-gradient(160deg, #f8f9fa 0%, #e9ecef 40%, #f8f9fa 100%);
             z-index: 0;
         }
