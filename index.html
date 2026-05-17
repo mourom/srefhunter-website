@@ -248,8 +248,7 @@
             /* 最大圆环尺寸（与 .header-circle.c1 的 min(620px, 62vw) 保持一致） */
             --circle-size: min(620px, 62vw);
             
-            /* 固定顶部间距（导航栏遮挡补偿，JS会动态更新此值） */
-            padding-top: var(--nav-height);
+            /* 不使用 padding-top，改用内部容器处理导航栏遮挡 */
             
             /* 使用 flexbox 实现内容垂直居中 */
             display: flex;
