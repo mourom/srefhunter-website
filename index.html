@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafeTensors</title>
+    <title>SrefHunter</title>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -23,7 +23,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #0f0f13;
+            background-color: #ffffff;
             overflow-x: hidden;
         }
         
@@ -70,14 +70,14 @@
         
         /* 通用玻璃卡片样式 */
         .glass-card {
-            background-color: rgba(255, 255, 255, 0.01);
+            background-color: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             border-radius: 16px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
         }
         
         .glass-card::after {
@@ -93,9 +93,9 @@
         
         .glass-card:hover {
             transform: translateY(-10px) scale(1.03) rotateX(5deg);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2), 0 0 40px rgba(102, 126, 234, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.1);
-            background-color: rgba(255, 255, 255, 0.03);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12), 0 0 40px rgba(102, 126, 234, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            border-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9);
         }
         
         .glass-card:hover::before {
@@ -130,16 +130,16 @@
             top: 0;
             left: 0;
             right: 0;
-            background-color: rgba(15, 15, 19, 0.95);
+            background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 20px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
         
         nav:hover {
-            border-bottom-color: rgba(255, 255, 255, 0.2);
+            border-bottom-color: rgba(0, 0, 0, 0.2);
         }
         
         .nav-container {
@@ -151,7 +151,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: white;
+            color: #333;
             text-decoration: none;
             background: linear-gradient(
                 90deg,
@@ -180,7 +180,7 @@
         }
         
         .nav-links a {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(0, 0, 0, 0.8);
             text-decoration: none;
             font-size: 1rem;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -190,8 +190,8 @@
             overflow: hidden;
             background: rgba(255, 255, 255, 0.01);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
         }
         
         .nav-links a::after {
@@ -206,12 +206,12 @@
         }
         
         .nav-links a:hover {
-            color: white;
-            background: rgba(255, 255, 255, 0.02);
+            color: #333;
+            background: rgba(0, 0, 0, 0.02);
             backdrop-filter: blur(30px);
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 0 20px rgba(102, 126, 234, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), 0 0 20px rgba(102, 126, 234, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            border-color: rgba(0, 0, 0, 0.08);
         }
         
         .nav-links a:hover::before {
@@ -258,7 +258,7 @@
         .header-bg {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(160deg, #0a0a12 0%, #12101e 40%, #0d1117 100%);
+            background: linear-gradient(160deg, #f8f9fa 0%, #e9ecef 40%, #f8f9fa 100%);
             z-index: 0;
             overflow: hidden;
         }
@@ -441,7 +441,7 @@
         header h1 {
             font-size: 4rem;
             font-weight: 700;
-            color: white;
+            color: #333;
             margin-bottom: 20px;
             letter-spacing: -1px;
             background: linear-gradient(
@@ -467,63 +467,29 @@
         
         header p {
             font-size: 1.4rem;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(0, 0, 0, 0.7);
             max-width: 800px;
             margin: 0 auto 40px;
             transition: all 0.3s ease;
         }
         
-        .disclaimer {
-            font-size: 1rem !important;
-            color: rgba(255, 255, 255, 0.7) !important;
-            max-width: 800px !important;
-            margin: 0 auto 20px !important;
-            line-height: 1.7;
-        }
-        
-        .disclaimer-brief {
-            font-size: 0.85rem !important;
-            color: rgba(255, 255, 255, 0.5) !important;
-            max-width: 800px !important;
-            margin: 0 auto 16px !important;
-            line-height: 1.4;
-            padding-top: 16px;
-            padding-bottom: 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            border-bottom: none;
-        }
-        
-        .disclaimer-section {
-            text-align: center;
-            padding: 30px;
-            margin-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        
-        .disclaimer-section h2 {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.7);
-            font-weight: normal;
-            margin-bottom: 20px;
-        }
-        
         header:hover p {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(0, 0, 0, 0.9);
         }
         
         .btn {
             display: inline-block;
             padding: 15px 30px;
-            background: rgba(255, 255, 255, 0.01);
+            background: rgba(0, 0, 0, 0.01);
             backdrop-filter: blur(25px);
-            color: white;
+            color: #333;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.03);
             position: relative;
             overflow: hidden;
             margin-top: 20px;
@@ -565,9 +531,9 @@
         
         .btn:hover {
             transform: translateY(-8px) scale(1.1) rotateX(5deg);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15), 0 0 30px rgba(102, 126, 234, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.08);
-            background: rgba(255, 255, 255, 0.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 0 30px rgba(102, 126, 234, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            border-color: rgba(0, 0, 0, 0.08);
+            background: rgba(0, 0, 0, 0.02);
             backdrop-filter: blur(35px);
         }
         
@@ -612,7 +578,7 @@
         .contact h2 {
             font-size: 2.2rem;
             margin-bottom: 20px;
-            color: white;
+            color: #333;
             transition: all 0.3s ease;
         }
         
@@ -634,13 +600,13 @@
         
         .contact p {
             font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(0, 0, 0, 0.7);
             margin-bottom: 30px;
             transition: all 0.3s ease;
         }
         
         .contact:hover p {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(0, 0, 0, 0.9);
         }
         
         .contact p.email {
@@ -673,7 +639,7 @@
         
         .features h2 {
             font-size: 2.5rem;
-            color: white;
+            color: #333;
             text-align: center;
             margin-bottom: 80px;
             transition: all 0.3s ease;
@@ -713,7 +679,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.05) 50%, rgba(15, 15, 19, 0) 100%);
+            background: radial-gradient(circle at 50% 50%, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.04) 50%, rgba(255, 255, 255, 0) 100%);
             z-index: -1;
             transition: all 0.4s ease;
         }
@@ -753,24 +719,24 @@
         
         .feature-card h3 {
             font-size: 1.5rem;
-            color: white;
+            color: #333;
             margin-bottom: 20px;
             transition: all 0.3s ease;
         }
         
         .feature-card:hover h3 {
             transform: translateY(-5px);
-            color: rgba(255, 255, 255, 0.95);
+            color: rgba(0, 0, 0, 0.95);
         }
         
         .feature-card p {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(0, 0, 0, 0.7);
             line-height: 1.7;
             transition: all 0.3s ease;
         }
         
         .feature-card:hover p {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(0, 0, 0, 0.9);
             transform: translateY(5px);
         }
         
@@ -783,7 +749,7 @@
         .ai-links h2 {
             font-size: 2.2rem;
             margin-bottom: 20px;
-            color: white;
+            color: #333;
             transition: all 0.3s ease;
         }
         
@@ -805,13 +771,13 @@
         
         .ai-links p {
             font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(0, 0, 0, 0.7);
             margin-bottom: 40px;
             transition: all 0.3s ease;
         }
         
         .ai-links:hover p {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(0, 0, 0, 0.9);
         }
         
         .links-container {
@@ -824,17 +790,17 @@
         .link-item {
             display: block;
             padding: 20px 24px;
-            background-color: rgba(255, 255, 255, 0.01);
-            border: 1px solid rgba(255, 255, 255, 0.03);
+            background-color: rgba(0, 0, 0, 0.01);
+            border: 1px solid rgba(0, 0, 0, 0.03);
             border-radius: 12px;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(0, 0, 0, 0.8);
             text-decoration: none;
             font-weight: 600;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             backdrop-filter: blur(20px);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
         }
         
         .link-item::after {
@@ -849,11 +815,11 @@
         }
         
         .link-item:hover {
-            color: white;
+            color: #333;
             transform: translateY(-8px) scale(1.05) rotateX(5deg);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 0 25px rgba(102, 126, 234, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.08);
-            background: rgba(255, 255, 255, 0.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 0 25px rgba(102, 126, 234, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            border-color: rgba(0, 0, 0, 0.08);
+            background: rgba(0, 0, 0, 0.02);
             backdrop-filter: blur(30px);
         }
         
@@ -894,19 +860,19 @@
         
         .ai-subcategory-title {
             font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.75);
+            color: rgba(0, 0, 0, 0.75);
             margin-bottom: 16px;
             padding-bottom: 8px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
             font-weight: 600;
             letter-spacing: 0.5px;
         }
         
         /* 页脚样式 */
         footer {
-            background-color: rgba(10, 10, 14, 0.8);
+            background-color: rgba(248, 249, 250, 0.8);
             padding: 80px 0 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
             margin-top: 120px;
         }
         
@@ -918,27 +884,27 @@
         }
         
         .footer-section h3 {
-            color: white;
+            color: #333;
             font-size: 1.2rem;
             margin-bottom: 20px;
         }
         
         .footer-section p,
         .footer-section a {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(0, 0, 0, 0.7);
             text-decoration: none;
             line-height: 1.7;
         }
         
         .footer-section a:hover {
-            color: white;
+            color: #333;
         }
         
         .footer-bottom {
             text-align: center;
             padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            color: rgba(0, 0, 0, 0.5);
         }
         
         /* 响应式设计 */
@@ -953,10 +919,6 @@
         }
         
         @media (max-width: 768px) {
-            .disclaimer-brief {
-                font-size: 0.72rem !important;
-            }
-            
             nav {
                 padding: 15px 0;
             }
@@ -1046,10 +1008,6 @@
         }
         
         @media (max-width: 480px) {
-            .disclaimer-brief {
-                font-size: 0.65rem !important;
-            }
-            
             nav {
                 padding: 12px 0;
             }
@@ -1137,10 +1095,6 @@
         }
         
         @media (max-width: 360px) {
-            .disclaimer-brief {
-                font-size: 0.6rem !important;
-            }
-            
             header h1 {
                 font-size: 1.8rem;
             }
@@ -1428,7 +1382,7 @@
             if (!counterElement) return;
             
             // 使用counterapi.dev服务
-            fetch('https://api.counterapi.dev/v1/safetensors.com/visits/up')
+            fetch('https://api.counterapi.dev/v1/srefhunter.com/visits/up')
                 .then(response => response.json())
                 .then(data => {
                     if (data && data.count !== undefined) {
@@ -1438,13 +1392,13 @@
                 .catch(error => {
                     console.log('Failed to load visitor count:', error);
                     // 使用本地存储作为备用
-                    let count = localStorage.getItem('safetensors_visitor_count');
+                    let count = localStorage.getItem('SrefHunter_visitor_count');
                     if (count) {
                         count = parseInt(count) + 1;
                     } else {
                         count = 1;
                     }
-                    localStorage.setItem('safetensors_visitor_count', count.toString());
+                    localStorage.setItem('SrefHunter_visitor_count', count.toString());
                     counterElement.textContent = count.toLocaleString();
                 });
         }
@@ -1463,7 +1417,7 @@
     <!-- 导航栏 -->
     <nav>
         <div class="container nav-container">
-            <a href="#" class="logo">SafeTensors</a>
+            <a href="#" class="logo">SrefHunter</a>
             <div class="nav-links">
                 <a href="#home">首页 / Home</a>
                 <a href="#features">社区生态门户 / Community Portal</a>
@@ -1489,8 +1443,7 @@
         <span class="geo-deco g7"></span>
         <span class="header-text">AI</span>
         <div class="container">
-            <p class="disclaimer-brief">本站与 Hugging Face 官方开发团队无任何授权、合作、关联关系，safetensors 为其Python pickle 格式。<br>This site has no authorization, cooperation, or affiliation with Hugging Face official development team, safetensors is its Python pickle format.</p>
-            <h1>SafeTensors</h1>
+            <h1>SrefHunter</h1>
             <p>欢迎访问AI门户网站，用AI驱动交互创意</p>
             <p>Welcome to the AI portal website, driving interactive creativity with AI</p>
             <a href="#resources" class="btn">开始探索 / Get Started</a>
@@ -1570,12 +1523,6 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="disclaimer-section scroll-animate">
-                <h2>免责声明 / Disclaimer</h2>
-                <p class="disclaimer">本站与 Hugging Face 官方开发团队无任何授权、合作、关联关系，safetensors 为其Python pickle 格式。本站为第三方独立运营的生态服务平台，提供AI开源生态的第三方资讯、工具与配套服务，所有内容与服务均与官方无任何关联。</p>
-                <p class="disclaimer">This site has no authorization, cooperation, or affiliation with Hugging Face official development team. safetensors is its Python pickle format. This site is a third-party independently operated ecosystem service platform providing third-party information, tools, and supporting services for the AI open-source ecosystem. All content and services are not associated with the official team in any way.</p>
-            </div>
         </div>
     </div>
     
@@ -1584,7 +1531,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section scroll-animate">
-                    <h3>SafeTensors</h3>
+                    <h3>SrefHunter</h3>
                     <p>AI 驱动的创意工具，为您的创作提供无限可能。</p>
                     <p>AI-driven creative tools, providing unlimited possibilities for your creation.</p>
                 </div>
@@ -1602,12 +1549,12 @@
                 </div>
             </div>
             <div class="footer-bottom scroll-animate" style="transition-delay: 0.6s;">
-                <p>&copy; 2026 SafeTensors. 保留所有权利。</p>
-                <p>&copy; 2026 SafeTensors. All rights reserved.</p>
+                <p>&copy; 2026 SrefHunter. 保留所有权利。</p>
+                <p>&copy; 2026 SrefHunter. All rights reserved.</p>
             </div>
-            <div class="visitor-count" style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.15);">
-                <span style="font-size: 0.85rem; color: rgba(255,255,255,0.35);">累计访问 / Total Visits</span>
-                <span id="visitor-counter" style="color: rgba(255,255,255,0.35); font-size: 0.85rem; font-weight: 600; font-family: 'Monaco', 'Consolas', monospace; margin-left: 8px;">--</span>
+            <div class="visitor-count" style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.15);">
+                <span style="font-size: 0.85rem; color: rgba(0,0,0,0.35);">累计访问 / Total Visits</span>
+                <span id="visitor-counter" style="color: rgba(0,0,0,0.35); font-size: 0.85rem; font-weight: 600; font-family: 'Monaco', 'Consolas', monospace; margin-left: 8px;">--</span>
             </div>
         </div>
     </footer>
