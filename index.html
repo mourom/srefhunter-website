@@ -242,11 +242,21 @@
         
         /* 头部样式 */
         header {
+            /* 导航栏高度（JS动态计算实际值覆盖此默认值） */
             --nav-height: 80px;
+            
+            /* 最大圆环尺寸（与 .header-circle.c1 的 min(620px, 62vw) 保持一致） */
             --circle-size: min(620px, 62vw);
-            padding-top: calc(var(--nav-height) + 8vh);
+            
+            /* 顶部间距 = 导航栏高度 + 视口高度的8%（避免被固定导航遮挡） */
+            padding-top: calc(var(--nav-height) + 16vh);
+            
+            /* 底部间距 = 圆环尺寸×0.3 + 视口高度5%（控制文字到背景底部的距离） */
             padding-bottom: calc(var(--circle-size) * 0.3 + 5vh);
-            min-height: calc(var(--nav-height) + var(--circle-size) * 1.2 + 10vh);
+            
+            /* 最小高度 = 导航栏 + 圆环尺寸×系数（调大系数可增加整体高度） */
+            min-height: calc(var(--nav-height) + var(--circle-size) * 0.1);
+            
             text-align: center;
             position: relative;
         }
