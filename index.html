@@ -248,7 +248,8 @@
             /* 最大圆环尺寸（与 .header-circle.c1 的 min(620px, 62vw) 保持一致） */
             --circle-size: min(620px, 62vw);
             
-            /* 不使用 padding-top，改用内部容器处理导航栏遮挡 */
+            /* 顶部偏移 = 导航栏高度（避免被固定导航遮挡） */
+            margin-top: var(--nav-height);
             
             /* 使用 flexbox 实现内容垂直居中 */
             display: flex;
@@ -257,7 +258,7 @@
             align-items: center;
             
             /* 方框高度 = 视口高度 - 导航栏高度（自动适配任何导航栏高度） */
-            height: calc(100vh - var(--nav-height));
+            height: calc(50vh - var(--nav-height));
             
             text-align: center;
             position: relative;
