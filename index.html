@@ -248,7 +248,7 @@
             /* 最大圆环尺寸（与 .header-circle.c1 的 min(620px, 62vw) 保持一致） */
             --circle-size: min(620px, 62vw);
             
-            /* 固定顶部间距（导航栏遮挡补偿） */
+            /* 固定顶部间距（导航栏遮挡补偿，JS会动态更新此值） */
             padding-top: var(--nav-height);
             
             /* 使用 flexbox 实现内容垂直居中 */
@@ -257,8 +257,8 @@
             justify-content: center;
             align-items: center;
             
-            /* 方框最小高度 = 视口高度×系数（调大系数可增加整体高度） */
-            min-height: calc(100vh - var(--nav-height));
+            /* 方框高度 = 视口高度 - 导航栏高度（自动适配任何导航栏高度） */
+            height: calc(100vh - var(--nav-height));
             
             text-align: center;
             position: relative;
@@ -1352,12 +1352,13 @@
             });
         }
         
-        // 动态调整首页顶部间距（基于导航栏高度）
+        // 动态调整首页高度（基于导航栏实际高度）
         function adjustHeaderSpacing() {
             const nav = document.querySelector('nav');
             const header = document.querySelector('header');
             if (nav && header) {
                 const navHeight = nav.offsetHeight;
+                // 设置 CSS 变量，header 的 height/padding-top 会自动更新
                 header.style.setProperty('--nav-height', navHeight + 'px');
             }
         }
@@ -1369,7 +1370,9 @@
             initBgInteractive();
             initGeoDecorations();
             randomizeFixedGeos();
-            adjustHeaderSpacing();
+            
+            // 延迟执行确保导航栏渲染完成
+            setTimeout(adjustHeaderSpacing, 100);
         });
         
         // 窗口大小改变时重新计算
